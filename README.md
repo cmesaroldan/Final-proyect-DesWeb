@@ -20,7 +20,7 @@ El sitio web contará con las siguientes características:
 2. **Búsqueda de lugares**: Función de búsqueda para encontrar sitios turísticos específicos por nombre o categoría.
 3. **Detalle de cada sitio**: Página de detalles donde se mostrará información más específica de cada sitio, incluyendo ubicación, horarios y reseñas.
 4. **Interactividad**: El sitio será completamente interactivo, con actualización de contenido en tiempo real sin necesidad de recargar la página.
-5. **Panel de administración**: Los administradores podrán agregar, editar o eliminar sitios turísticos de la base de datos.
 
-## Estructura del Proyecto
+
+
 
