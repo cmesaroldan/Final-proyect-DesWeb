@@ -111,3 +111,41 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Formularios de inicio de sesión y registro */
+#login, #register {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login h3, #register h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#loginForm input, #registerForm input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#loginForm button, #registerForm button {
+    width: 100%;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#loginForm button:hover, #registerForm button:hover {
+    background-color: #e65c00;
+}
