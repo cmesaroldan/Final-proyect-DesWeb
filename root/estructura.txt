@@ -1,0 +1,17 @@
+SitiosTuristicos/
+│
+├── database/
+│   └── sitios_turisticos.sql    # Archivo SQL con las tablas
+│
+├── server/
+│   ├── app.js                   # Archivo principal del servidor Node.js
+│   ├── Dockerfile               # Dockerfile para el contenedor del servidor
+│   └── package.json             # Dependencias del proyecto Node.js
+│
+├── public/
+│   ├── index.html               # Frontend HTML
+│   ├── styles.css               # Estilos del sitio
+│   └── script.js                # Lógica del frontend
+│
+├── docker-compose.yml            # Archivo para definir los servicios en Docker
+└── README.md                    # Documentación del proyecto
