@@ -10,7 +10,7 @@ services:
     volumes:
       - ./database/sitios_turisticos.sql:/docker-entrypoint-initdb.d/sitios_turisticos.sql
     ports:
-      - "3306:3306"
+      - "3307:3306"
   
   web:
     build: ./server

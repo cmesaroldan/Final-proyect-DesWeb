@@ -1,7 +1,8 @@
 -- Base de datos: Sitios Turísticos del Valle de Aburrá
 
 -- Crear la base de datos
-CREATE DATABASE sitios_turisticos_aburra;
+CREATE DATABASE IF NOT EXISTS sitios_turisticos_aburra;
+
 USE sitios_turisticos_aburra;
 
 -- Tabla USUARIO
