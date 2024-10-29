@@ -1,30 +1,30 @@
-// Cargar sitios turísticos
-async function loadSitiosTuristicos() {
+document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('/api/sitios', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        // Hacer una solicitud GET a la API para obtener los sitios turísticos
+        const response = await fetch('/api/sitios');
+        
+        // Verificar si la respuesta fue exitosa
+        if (!response.ok) {
+            throw new Error('Error en la red');
+        }
+        
+        // Convertir la respuesta a JSON
         const sitios = await response.json();
-        const gridContainer = document.querySelector('.grid-container');
-        gridContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar sitios
+        
+        // Seleccionar el elemento donde se mostrarán los sitios
+        const sitiosDiv = document.getElementById('sitios');
+        
+        // Iterar sobre los sitios y crear elementos para mostrarlos
         sitios.forEach(sitio => {
-            const sitioDiv = document.createElement('div');
-            sitioDiv.classList.add('sitio');
-            sitioDiv.innerHTML = `
-                <img src="${sitio.imagen}" alt="${sitio.nombre}">
-                <h4>${sitio.nombre}</h4>
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <h2>${sitio.nombre}</h2>
                 <p>${sitio.descripcion}</p>
-                <a href="#" class="btn">Ver más</a>
             `;
-            gridContainer.appendChild(sitioDiv);
+            sitiosDiv.appendChild(div);
         });
     } catch (error) {
-        console.error('Error al cargar sitios turísticos:', error);
+        // Manejar cualquier error que ocurra durante la solicitud
+        console.error('Error al cargar sitios:', error);
     }
-}
-
-// Llamar la función para cargar los sitios turísticos al iniciar la página
-loadSitiosTuristicos();
+});
