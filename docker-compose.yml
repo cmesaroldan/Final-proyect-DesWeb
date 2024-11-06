@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: mysql:8.0  # Puedes cambiar a postgres si lo prefieres
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password123
       MYSQL_DATABASE: sitios_turisticos_aburra
@@ -10,8 +10,7 @@ services:
     volumes:
       - ./database/sitios_turisticos.sql:/docker-entrypoint-initdb.d/sitios_turisticos.sql
     ports:
-      - "3307:3306"
-  
+      - "3307:3306"  # Cambié a 3307 en el host para evitar conflictos
   web:
     build: ./server
     ports:
@@ -23,3 +22,5 @@ services:
       DB_USER: user
       DB_PASSWORD: password
       DB_NAME: sitios_turisticos_aburra
+    volumes:
+      - ./public:/usr/src/app/public  # Monta la carpeta pública para servir los archivos estáticos
