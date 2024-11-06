@@ -1,16 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
 
-#sitios {
+#places {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -19,19 +17,47 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#sitios div {
+.place {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
 }
 
-#sitios h2 {
-    margin: 0 0 10px;
-    color: #007BFF; /* Color azul para los títulos de los sitios */
+.place img {
+    max-width: 100%;
+    height: auto;
 }
 
-#sitios p {
-    margin: 0;
-    color: #555; /* Color gris para la descripción */
+.place h2 {
+    color: #007BFF;
+}
+
+.place p {
+    color: #555;
+}
+
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
 }

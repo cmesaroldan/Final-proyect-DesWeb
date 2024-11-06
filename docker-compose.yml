@@ -1,25 +1,33 @@
 version: '3.8'
 services:
   db:
-    image: mysql:8.0  # Puedes cambiar a postgres si lo prefieres
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password123
-      MYSQL_DATABASE: sitios_turisticos_aburra
+      MYSQL_DATABASE: TouristDB  # Cambiado a TouristDB
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:
-      - ./database/sitios_turisticos.sql:/docker-entrypoint-initdb.d/sitios_turisticos.sql
+      - ./database/places.sql:/docker-entrypoint-initdb.d/places.sql  # Cambiado a places.sql
     ports:
-      - "3307:3306"
-  
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   web:
-    build: ./server
+    build: ./server  # Construye el Dockerfile ubicado en la carpeta server
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       DB_HOST: db
       DB_USER: user
       DB_PASSWORD: password
-      DB_NAME: sitios_turisticos_aburra
+      DB_NAME: TouristDB  # Cambiado a TouristDB
+    volumes:
+      - ./public:/app/public  # Monta la carpeta 'public' para servir los archivos estáticos

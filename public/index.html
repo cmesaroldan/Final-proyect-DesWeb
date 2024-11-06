@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sitios Turísticos</title>
+    <title>Lugares Turísticos en Antioquia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Sitios Turísticos del Valle de Aburrá</h1>
-    <div id="sitios"></div>
+    <h1>Lugares Turísticos en Antioquia</h1>
+
+    <div id="places"></div>
+
+    <!-- Formulario para agregar un nuevo lugar turístico -->
+    <h2>Agregar un Nuevo Lugar Turístico</h2>
+    <form id="placeForm">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="text" id="image_url" placeholder="URL de la imagen">
+        <textarea id="description" placeholder="Descripción" required></textarea>
+        <input type="text" id="address" placeholder="Dirección" required>
+        <button type="submit">Agregar Lugar</button>
+    </form>
+
     <script src="script.js"></script>
 </body>
 </html>
