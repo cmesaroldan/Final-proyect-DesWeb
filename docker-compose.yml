@@ -10,7 +10,6 @@ services:
     volumes:
       - ./database/places.sql:/docker-entrypoint-initdb.d/places.sql  # Cambiado a places.sql
     ports:
-<<<<<<< HEAD
       - "3306:3306"
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
@@ -18,9 +17,6 @@ services:
       timeout: 5s
       retries: 5
 
-=======
-      - "3307:3306"  # Cambié a 3307 en el host para evitar conflictos
->>>>>>> 1bb3beacb28d1c71e98f2d3e5c41a47023a27d65
   web:
     build: ./server  # Construye el Dockerfile ubicado en la carpeta server
     ports:
@@ -32,12 +28,6 @@ services:
       DB_HOST: db
       DB_USER: user
       DB_PASSWORD: password
-<<<<<<< HEAD
       DB_NAME: TouristDB  # Cambiado a TouristDB
     volumes:
       - ./public:/app/public  # Monta la carpeta 'public' para servir los archivos estáticos
-=======
-      DB_NAME: sitios_turisticos_aburra
-    volumes:
-      - ./public:/usr/src/app/public  # Monta la carpeta pública para servir los archivos estáticos
->>>>>>> 1bb3beacb28d1c71e98f2d3e5c41a47023a27d65
