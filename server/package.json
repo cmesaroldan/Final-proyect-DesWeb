@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "book-list",
     "version": "1.0.0",
     "description": "API para gestionar una lista de libros",
@@ -11,5 +12,18 @@
       "mysql2": "^2.3.3",
       "dotenv": "^16.0.0"
     }
+=======
+  "name": "sitios-turisticos",
+  "version": "1.0.0",
+  "description": "API para gestionar sitios turísticos del Valle de Aburrá",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",  
+    "dotenv": "^16.0.0"
+>>>>>>> 1bb3beacb28d1c71e98f2d3e5c41a47023a27d65
   }
-  
+}
