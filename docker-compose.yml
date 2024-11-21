@@ -4,11 +4,11 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password123
-      MYSQL_DATABASE: TouristDB  # Cambiado a TouristDB
+      MYSQL_DATABASE: TouristDB
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:
-      - ./database/places.sql:/docker-entrypoint-initdb.d/places.sql  # Cambiado a places.sql
+      - ./database/places.sql:/docker-entrypoint-initdb.d/places.sql
     ports:
       - "3306:3306"
     healthcheck:
@@ -18,7 +18,9 @@ services:
       retries: 5
 
   web:
-    build: ./server  # Construye el Dockerfile ubicado en la carpeta server
+    build: 
+      context: ./server
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
@@ -28,6 +30,9 @@ services:
       DB_HOST: db
       DB_USER: user
       DB_PASSWORD: password
-      DB_NAME: TouristDB  # Cambiado a TouristDB
+      DB_NAME: TouristDB
+      JWT_SECRET: tu_clave_secreta_muy_segura
     volumes:
-      - ./public:/app/public  # Monta la carpeta 'public' para servir los archivos estáticos
+      - ./server/public:/app/public
+      - ./server/app.js:/app/app.js
+      - /app/node_modules

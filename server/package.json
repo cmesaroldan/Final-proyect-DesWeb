@@ -1,15 +1,18 @@
 {
-    "name": "book-list",
-    "version": "1.0.0",
-    "description": "API para gestionar una lista de libros",
-    "main": "app.js",
-    "scripts": {
-      "start": "node app.js"
-    },
-    "dependencies": {
-      "express": "^4.18.2",
-      "mysql2": "^2.3.3",
-      "dotenv": "^16.0.0"
-    }
+  "name": "tourist-sites",
+  "version": "1.0.0",
+  "description": "API para gestionar sitios turísticos",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "dotenv": "^16.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5"
   }
-  
+}

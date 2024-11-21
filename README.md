@@ -22,4 +22,7 @@ El sitio web contará con las siguientes características:
 3. **Detalle de cada sitio**: Página de detalles donde se mostrará información más específica de cada sitio, incluyendo ubicación, horarios y reseñas.
 4. **Interactividad**: El sitio será completamente interactivo, con actualización de contenido en tiempo real sin necesidad de recargar la página.
 
+## Futuras Funcionalidades
 
+- **Reseñas de usuarios**: Los visitantes podrán dejar reseñas y valoraciones sobre los sitios turísticos.
+- **Mapas interactivos**: Implementación de mapas para visualizar la ubicación de los sitios turísticos de manera geoespacial.

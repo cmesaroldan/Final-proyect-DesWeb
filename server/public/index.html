@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitios Turísticos de Antioquia</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="auth-section">
+        <!-- Formulario de Login -->
+        <div id="login-form" class="auth-form">
+            <h2>Iniciar Sesión</h2>
+            <form onsubmit="return handleLogin(event)">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <p>¿No tienes cuenta? <a href="#" onclick="toggleForms()">Regístrate</a></p>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="register-form" class="auth-form" style="display: none;">
+            <h2>Registro</h2>
+            <form onsubmit="return handleRegister(event)">
+                <input type="text" id="register-name" placeholder="Nombre" required>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <input type="password" id="register-password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="toggleForms()">Inicia Sesión</a></p>
+        </div>
+    </div>
+
+    <!-- Contenido Principal (oculto hasta login) -->
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Sitios Turísticos de Antioquia</h1>
+            <button onclick="handleLogout()" class="logout-btn">Cerrar Sesión</button>
+        </header>
+
+        <div id="places"></div>
+
+        <div id="add-place-form">
+            <h2>Agregar Nuevo Lugar Turístico</h2>
+            <form onsubmit="return handleAddPlace(event)">
+                <input type="text" id="name" placeholder="Nombre del lugar" required>
+                <input type="url" id="image_url" placeholder="URL de la imagen">
+                <textarea id="description" placeholder="Descripción" required></textarea>
+                <input type="text" id="address" placeholder="Dirección" required>
+                <button type="submit">Agregar Lugar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
