@@ -32,6 +32,3 @@ INSERT INTO TouristPlaces (name, image_url, description, address) VALUES
 ('Pueblito Paisa', 'https://i.pinimg.com/originals/f4/d2/9e/f4d29e293a9d29874bf7e16128d62d3d.jpg', 'Representación de un típico pueblo antioqueño.', 'Cerro Nutibara, Medellín');
 
 
-INSERT INTO usuarios (nombre, email, password) VALUES 
-('Administrador', 'admin@lugares.com','$2a$10$zOqBTgbXFtbBX.KE1amYWu1iR3Guqg6sFOPESEkIpgt406imL67jO',TRUE,30),
-('Carlos', 'mesacarloste@gmail.com','$2a$10$IxcsAvm0vIUXw9/UU3s1DeIoGpQkO0LI/7vRiDtNlHPmnFOAS76Iq',FALSE,22);
