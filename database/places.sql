@@ -28,7 +28,7 @@ CREATE TABLE TouristPlaces (
 
 -- Datos de ejemplo para lugares turísticos
 INSERT INTO TouristPlaces (name, image_url, description, address) VALUES 
-('Parque Explora', 'https://c8.alamy.com/comp/HMDA91/parque-explora-explore-park-interactive-science-museum-medellin-antioquia-HMDA91.jpg', 'Centro interactivo de ciencia y tecnología.', 'Cl. 52 #73-75, Medellín'),
-('Pueblito Paisa', 'https://i.pinimg.com/originals/f4/d2/9e/f4d29e293a9d29874bf7e16128d62d3d.jpg', 'Representación de un típico pueblo antioqueño.', 'Cerro Nutibara, Medellín');
+('Parque Explora', 'https://c8.alamy.com/comp/HMDA91/parque-explora-explore-park-interactive-science-museum-medellin-antioquia-HMDA91.jpg', 'Centro interactivo de ciencia y tecnologia.', 'Cl. 52 #73-75, Medellin'),
+('Pueblito Paisa', 'https://i.pinimg.com/originals/f4/d2/9e/f4d29e293a9d29874bf7e16128d62d3d.jpg', 'Representacion de un tipico pueblo antioqueno.', 'Cerro Nutibara, Medellin');
 
 
