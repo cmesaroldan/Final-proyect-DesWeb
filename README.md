@@ -23,6 +23,7 @@ El sitio web contará con las siguientes características:
 4. **Interactividad**: El sitio será completamente interactivo, con actualización de contenido en tiempo real sin necesidad de recargar la página.
 
 ## Ingreso a la aplicacion
-
+-**Registro**: Se realiza un registro de usuario con los datos que el formulario requiere, una vez se oprime el boton "Cerrar Sesión".
+-**Ingreso**: Se da acceso a la plataforma mediante las credenciales creadas con anterioridad.
 - **ADMINISTRADOR**: Usuario: Administrador ------Contraseña: admin123.
 - **Mapas interactivos**: Implementación de mapas para visualizar la ubicación de los sitios turísticos de manera geoespacial.
